@@ -1,5 +1,5 @@
 import json
-from typing import Any, Optional
+from typing import Any, Optional, Dict
 
 from bot.api import API
 
@@ -7,7 +7,7 @@ from bot.api import API
 class LikeeAPI(API):
 
     @property
-    def headers(self) -> dict[str, Any]:
+    def headers(self) -> Dict[str, Any]:
         return {'Referer': 'https://www.likee.video/'}
 
     @property

@@ -1,7 +1,7 @@
 import asyncio
 import re
 from abc import ABC, abstractmethod
-from typing import Any, List, Optional
+from typing import Any, List, Optional, Dict
 
 import httpx
 import sentry_sdk
@@ -20,7 +20,7 @@ class API(ABC):
     )
 
     @property
-    def headers(self) -> dict[str, Any]:
+    def headers(self) -> Dict[str, Any]:
         return {}
 
     @property
